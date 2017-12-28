@@ -4,7 +4,8 @@
   "main": "start.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ./start.js"
+    "start": "node ./start.js",
+    "dev": "nodemon ./start.js"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
