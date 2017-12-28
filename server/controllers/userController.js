@@ -1,11 +1,11 @@
 const Demo = require('../models/Demo');
 
 exports.home = (req, res) => {
-  res.send('hello world');
+  res.json('hello world');
 };
 
 exports.login = (req, res) => {
-  res.send('is user logged in ?');
+  res.json('is user logged in ?');
 };
 
 exports.getSampleData = async (req, res) => {

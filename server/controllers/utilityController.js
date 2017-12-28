@@ -23,5 +23,5 @@ exports.seedDB = async (req, res) => {
     });
   });
 
-  res.send('Database seeded successfully');
+  res.json('Database seeded successfully');
 };
