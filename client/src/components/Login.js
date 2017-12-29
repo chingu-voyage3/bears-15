@@ -13,15 +13,15 @@ class Login extends Component {
 
   onSuccess = (response) => {
     const token = response.headers.get('x-auth-token');
-    response.json().then( (user) => {
-      if (token) {
+    if (token) {
+      response.json().then( user => {
         this.setState({
           isAuthenticated: true,
           user,
           token
         });
-      }
-    });
+      });
+    }
   };
 
   onFailed = (error) => {
@@ -54,7 +54,8 @@ class Login extends Component {
       (
         <TwitterLogin
           loginUrl="http://localhost:8080/api/v1/auth/twitter"
-          onFailure={this.onFailed} onSuccess={this.onSuccess}
+          onFailure={this.onFailed}
+          onSuccess={this.onSuccess}
           requestTokenUrl="http://localhost:8080/api/v1/auth/twitter/reverse"
         />
       );
