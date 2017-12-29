@@ -33,5 +33,4 @@ const demoSchema = new mongoose.Schema({
   }
 });
 
-
 module.exports = mongoose.model('Demo', demoSchema);
